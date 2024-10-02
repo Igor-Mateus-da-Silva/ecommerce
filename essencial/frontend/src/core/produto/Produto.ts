@@ -1,4 +1,7 @@
-export default interface Produto {
+import Especificacoes from "./Especificacoes";
+import Precificavel from "./Precificavel";
+
+export default interface Produto extends Precificavel {
   id: number;
   nome: string;
   descricao: string;
@@ -7,5 +10,6 @@ export default interface Produto {
   imagem: string;
   videoReview: string;
   nota: number;
-  tags: string;
+  tags: string[];
+  especificacoes: Especificacoes;
 }

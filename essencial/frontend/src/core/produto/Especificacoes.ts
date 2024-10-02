@@ -1,3 +1,4 @@
 export default interface Especificacoes {
-  id: number;
+  destaque: string;
+  [chave: string]: string | number | boolean;
 }
