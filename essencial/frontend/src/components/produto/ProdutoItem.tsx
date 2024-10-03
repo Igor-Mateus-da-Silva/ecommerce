@@ -7,6 +7,7 @@ import Link from "next/link";
 export interface ProdutoItemProps {
   produto: Produto;
 }
+
 export default function ProdutoItem(props: ProdutoItemProps) {
   const { produto } = props;
   return (
@@ -17,12 +18,17 @@ export default function ProdutoItem(props: ProdutoItemProps) {
       <div className="h-48 w-full relative">
         <Image
           src={produto.imagem}
-          alt="Imagem do Produto"
+          alt="Imagem do produto"
           className="object-contain"
           fill
         />
       </div>
-      <div className="flex-1 flex flex-col p-5 gap-3 border-t border-white/10">
+      <div
+        className="
+                    flex-1 flex flex-col p-5 gap-3 
+                    border-t border-white/10
+                "
+      >
         <span className="text-lg font-semibold">{props.produto.nome}</span>
         <span className="text-sm border-b border-dashed self-start">
           {produto.especificacoes.destaque}
@@ -37,10 +43,13 @@ export default function ProdutoItem(props: ProdutoItemProps) {
           </span>
         </div>
         <button
-          className="flex justify-center items-center h-8 gap-2 bg-violet-700 hover:border-2 border-emerald-500 rounded-full"
+          className="
+                        flex justify-center items-center h-8 gap-2
+                        bg-violet-700 hover:border-2 border-emerald-500 rounded-full
+                    "
           onClick={(e: any) => {
             e.preventDefault();
-            console.log("Adicionando ao carrinho");
+            console.log("Adicionar ao carrinho");
           }}
         >
           <IconShoppingCartPlus size={20} />
